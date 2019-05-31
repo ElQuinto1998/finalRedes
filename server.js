@@ -1,24 +1,21 @@
-const express = require('express');
-const logger = require('morgan');
-const bParser = require('body-parser');
-const cors = require('cors');
+// load the things we need
+var express = require('express');
+var app = express();
 
-const app = express();
-
-//Middlewars
-app.use(logger('combined'));
-app.use(bParser.urlencoded({extended: false}));
-app.use(cors({ origin: 'http://localhost:4200' }));
-
-//Router
-// app.use('/products', require('./router/products'));
-// app.use('/users', require('./router/users'));
+//Concexiona db
 //require('./conection_bd/bd');
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
-//Port
-app.set('port', process.env.PORT || 3000);
+// use res.render to load up an ejs view file
+var rutas = require('./routes/alumnoRoutes');
 
-//Running Server
-app.listen(app.get('port'), ()=> {
-    console.log('Running on port', app.get('port'));
+// index page 
+app.use('/', rutas);
+// about page 
+app.get('/about', function(req, res) {
+	res.render('pages/about');
 });
+
+app.listen(8080);
+console.log('8080 is the magic port');

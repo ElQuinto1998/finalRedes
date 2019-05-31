@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="row">
+			<div class="col-sm-8">
+			
+				<% include ../partials/tabla %>
+				
+			</div>
+			<div class="col-sm-4">
+				
+				<div class="well">
+					<h4>Crear alumno</h4>
+					<form>
+						<div class="form-group">
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+						</div>
+						<div class="form-group">
+						  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Codigo">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Semestre">
+						  </div>
+						<button type="submit" class="btn btn-primary">Guardar</button>
+					  </form>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

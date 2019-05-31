@@ -6,6 +6,7 @@ var connection = mysql.createConnection({
    database: 'node_mysql',
    port: 3306
 });
+
 connection.connect(function(error){
    if(error){
       throw error;
@@ -13,4 +14,5 @@ connection.connect(function(error){
       console.log('Conexion correcta.');
    }
 });
-//connection.end();
+
+module.exports = connection;
