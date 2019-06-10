@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<% include ../partials/head %>
 </head>
+
 <body class="container">
 
 	<header>
@@ -10,12 +12,34 @@
 	</header>
 
 	<main>
-		<% include ../partials/tabla%>
+		<div class="jumbotron">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">Codigo</th>
+						<th scope="col">Semestre</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i = 0; i < alumnos.length; i++) {%>
+					<tr>
+						<th scope="row"><%= i+1 %></th>
+						<td><%= alumnos[i].nombre %></td>
+						<td><%= alumnos[i].codigo %></td>
+						<td><%= alumnos[i].semestre %></td>
+					</tr>
+					<%} %>
+				</tbody>
+			</table>
+		</div>
 	</main>
 
 	<footer>
 		<% include ../partials/footer %>
 	</footer>
-	
+
 </body>
+
 </html>

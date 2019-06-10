@@ -1,5 +1,4 @@
-module.exports = {
-    alumnos: [
+alumnos = [
         {
             nombre: "Andres",
             codigo: '467445',
@@ -27,4 +26,4 @@ module.exports = {
         },
 
     ]
-}
+module.exports = alumnos;

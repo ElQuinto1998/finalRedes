@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include ../partials/head %>
+</head>
+
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="row">
+			<div class="col-sm-4 col-md-offset-4">
+				<div class="well">
+					<h4>Crear alumno</h4>
+					<form method="POST">
+						<div class="form-group">
+							<input type="text" class="form-control" name="nombre" aria-describedby="emailHelp"
+								placeholder="Nombre" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="codigo" placeholder="Codigo" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="semestre" placeholder="Semestre" required>
+						</div>
+						<button type="submit" id="guardar" class="btn btn-primary">Guardar</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+
+</body>
+
+</html>
